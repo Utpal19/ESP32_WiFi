@@ -11,6 +11,8 @@ build/
 sdkconfig
 sdkconfig.*
 
+# exclude
+!main/CMakLists.txt
 
 
 # Except for files in this folder (if it contains other folders you want to ignore)

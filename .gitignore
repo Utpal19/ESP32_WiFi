@@ -1,10 +1,15 @@
-# Ignore everything
-*
-# But not this folder
-!main/
+# Ignore these folder
+.devcontainer/
+.vscode/
+build/
 
-# Ignore .gitignore file
-!.gitignore 
+
+#  Ignore files
+*.txt
+*.log
+*.py
+sdkconfig
+sdkconfig.*
 
 
 

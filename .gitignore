@@ -3,16 +3,16 @@
 .vscode/
 build/
 
-
 #  Ignore files
 *.txt
 *.log
 *.py
 sdkconfig
 sdkconfig.*
+exclude
 
-# exclude
-!main/CMakLists.txt
+# Expect these files
+!CMakLists.txt
 
 
 # Except for files in this folder (if it contains other folders you want to ignore)
@@ -20,7 +20,7 @@ sdkconfig.*
 #*.txt
 
 # Re-include specific files or folders within the tracked folder, if necessary
-!main/*/
+# !main/*/
 #!main/src/
 #!main/include/
 

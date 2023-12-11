@@ -1,0 +1,19 @@
+# Ignore everything
+*
+# But not this folder
+!main/
+
+# Ignore .gitignore file
+!.gitignore 
+
+
+
+# Except for files in this folder (if it contains other folders you want to ignore)
+# main/*/
+#*.txt
+
+# Re-include specific files or folders within the tracked folder, if necessary
+!main/*/
+#!main/src/
+#!main/include/
+

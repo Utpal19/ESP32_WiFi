@@ -28,6 +28,7 @@
 
 #include "nvs_flash.h"
 #include "wifi_app.h"
+#include "wifi_simple.h"
 
 #include "extern.h"
 
@@ -93,6 +94,7 @@ void Task2(void *pvParameters) {
         }
     }
 }
+*/
 
 void chipInfo(void)
 {
@@ -128,7 +130,6 @@ void chipInfo(void)
     // }
 
 }
-*/
 
 // wifi_app_start
 
@@ -145,20 +146,19 @@ void app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    // Start WiFi
-    wifi_app_start();
-
-/*
     ESP_LOGI(TAG, "INTERFACE is i2c");
-	ESP_LOGI(TAG, "CONFIG_SDA_GPIO=%d",CONFIG_SDA_GPIO);
-	ESP_LOGI(TAG, "CONFIG_SCL_GPIO=%d",CONFIG_SCL_GPIO);
-	ESP_LOGI(TAG, "CONFIG_RESET_GPIO=%d",CONFIG_RESET_GPIO);
+	ESP_LOGI(TAG, "CONFIG_SDA_GPIO=%d", CONFIG_SDA_GPIO);
+	ESP_LOGI(TAG, "CONFIG_SCL_GPIO=%d", CONFIG_SCL_GPIO);
+	ESP_LOGI(TAG, "CONFIG_RESET_GPIO=%d", CONFIG_RESET_GPIO);
 
 	i2c_master_init(&dev, CONFIG_SDA_GPIO, CONFIG_SCL_GPIO, CONFIG_RESET_GPIO);
     printf("*** Address of dev in main(): %p\n", &dev);
     chipInfo();
     o_disp_test(&dev);
     // wifi_app_start();
+    wifi_connection();
+
+/*
 	vTaskDelay(5000 / portTICK_PERIOD_MS);
 
     // Create the mutex
